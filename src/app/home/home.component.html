@@ -1,0 +1,94 @@
+<div class="container">
+  <h1 class="text-center">AES Encryption and Decryption with angular</h1>
+  <br />
+  <div>
+    <section class="row justify-content-center">
+      <div class="col-sm-6 border p-2">
+        <h1> Encrypt</h1>
+        <br />
+        <div class="form-group">
+          <label for="txtTextToConvert">Plain Text</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter text you want to encrypt"
+            [(ngModel)]="message"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="txtPassword">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Enter encryption password"
+            [(ngModel)]="password"
+          />
+        </div>
+        <!-- <textarea class="form-control" readonly rows="3">{{conversionEncryptOutput}}</textarea> -->
+        <br />
+        <button
+          type="button"
+          class="btn btn-success float-right"
+          (click)="encrypt()"
+        >
+          Encrypt
+        </button>
+      </div>
+
+      <div class="col-sm-6 border text center p-2">
+
+        <h1> Decrypt</h1>
+
+        <div class="form-group mt-5">
+          <label for="txtPassword">Password to decrypt </label>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Enter encryption password"
+            [(ngModel)]="decryptPassword"
+          />
+        </div>
+
+        <button
+          type="button"
+          class="btn btn-success float-right mt-2"
+          (click)="decrypt()"
+        >
+          Decrypt
+        </button>
+      </div>
+    </section>
+
+    <section class="row justify-content-center">
+      <div class="col-sm-6 border text center p-2">
+        <div class="d-flex flex-row mt-2">
+          <div class="p-2 bg-secondary text-white">Entered Message :</div>
+          <div class="p-2 border">{{ message }}</div>
+        </div>
+
+        <div class="d-flex flex-row mt-2">
+          <div class="p-2 bg-secondary text-white">Entered Password :</div>
+          <div class="p-2 border">{{ password }}</div>
+        </div>
+
+        <div class="d-flex flex-row mt-2">
+          <div class="p-2 bg-secondary text-white">Encrypted Message :</div>
+          <div class="p-2 border">{{ encryptedMessage }}</div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 border text center p-2">
+        <div class="d-flex flex-row mt-2">
+          <div class="p-2 bg-secondary text-white">Password to Decrypted :</div>
+          <div class="p-2 border">{{ decryptPassword }}</div>
+        </div>
+
+        <div class="d-flex flex-row mt-2">
+          <div class="p-2 bg-secondary text-white">Decrypted Message :</div>
+          <div class="p-2 border">{{ decryptedMessage }}</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
