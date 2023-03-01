@@ -1,6 +1,7 @@
 # Aes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.9.
+This project contains the simple encryption and decryption of the text message using AES encryption
 
 ## Development server
 
